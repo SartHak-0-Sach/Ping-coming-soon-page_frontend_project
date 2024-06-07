@@ -2,33 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Ping coming soon page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  We are launching soon!
+  <main>
+    <div class="logo_container">
+      <img src="./images/logo.svg" alt="logo">
+    </div>
+    
+    <div class="container">
 
-  Subscribe and get notified
+    <article>
+      <h1> <span>We are launching</span> soon! </h1>
 
-  Notify Me
+      <small>Subscribe and get notified</small>
+    </article>
+  
+    <form autocomplete="on">
+      <input aria-label="input your emmian" type="text" placeholder="Your email address...">
+      <small></small>
+      <button title="button" type="button">Notify Me</button>
+    </form>
+   
+    </div>
 
-  &copy; Copyright Ping. All rights reserved.
+    <img src="./images/illustration-dashboard.png" alt="illustration dashboard" class="dashboard">
+    
+  </main>
 
   <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
+    <div class="containerIcon">
+
+      <ul class="icon">
+        <a aria-label="go to facebook" href="https://www.facebook.com/heisemmco" class="set">
+          <li><i class="fa-brands fa-facebook-f"></i></li>
+        </a>
+
+        <a aria-label="go to twitter" href="https://www.twitter.com/heisemmco" class="set">
+          <li><i class="fa-brands fa-x-twitter"></i></li>
+        </a>
+
+        <a aria-label="go to instagram" href="https://www.instagram.com/heisemmco" class="set">
+          <li><i class="fa-brands fa-instagram"></i></li>
+        </a>
+      </ul>
+
+      <small> &copy; Copyright Ping. All rights reserved.</small>
+    </div>
+
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
