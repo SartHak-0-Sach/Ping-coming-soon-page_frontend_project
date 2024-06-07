@@ -1,5 +1,283 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /*
+    2. Remove default margin
+  */
+  * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+  }
+
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    /* font-family: 'Libre Franklin', sans-serif; */
+
+    color: var(--Desaturated-Red);
+    font-family: 'Libre Franklin', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 72px;
+    padding: 40px;
+  }
+
+  /*
+    5. Improve media defaults
+  */
+  img{
+    display: block;
+    max-width: 100%;
+  }
+
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button{
+    font: inherit;
+  }
+
+  /*
+    7. Avoid text overflows
+  */
+  p, h1{
+    overflow-wrap: break-word;
+  }
+
+  :root {
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  main .logo_container {
+    margin-bottom: 16px;
+  }
+
+  main .logo_container img {
+    max-width: 100px;
+    width: 60%;
+  }
+
+  main .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  main .container article {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    color: var(--Very-Dark-Blue);
+    width: 100%;
+  }
+
+  main .container article h1 {
+    font-size: 1.2rem;
+    color: var(--Very-Dark-Blue);
+  }
+
+  main .container article h1 span {
+    color: var(--Gray);
+    font-weight: 300;
+  }
+
+  main .container article small {
+    font-weight: 600;
+  }
+
+  main .container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    
+    width: 100%;
+
+    position: relative;
+  }
+
+  main .container form input {
+    padding: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+
+    border: 1px solid var(--Pale-Blue);
+    width: 100%;
+  }
+
+ main .container form.error input {
+    border: 1px solid var(--Light-Red);
+  }
+
+  main .container form input::placeholder {
+    font-size: 0.85rem;
+    color: var(--Pale-Blue);
+  }
+
+  main .container form small {
+  color: var(--Light-Red);
+  font-size: 0.75rem;
+
+  position: relative;
+  top: -6px;
+  display: none;
+  }
+
+  main .container form.error small {
+    display: initial;
+  }
+
+  main .container form button {
+    padding: 10px;
+    border-radius: 30px;
+
+    border: none;
+    background-color: var(--Blue);
+    color: white;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+
+    box-shadow:0 8px 7px -1px hsla(223, 86%, 86%, 185.882);
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+
+  main .container form button:is(:hover, :focus) {
+    background-color: hsl(223, 87%, 69%);
+  }
+  main .dashboard {
+    margin-top: 30px;
+  }
+
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .containerIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    color: var(--Gray);
+  }
+
+  footer .containerIcon .icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  footer .containerIcon .icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+    padding: 14px;
+    border-radius: 50%;
+    border: 1px solid var(--Pale-Blue);
+
+    color: var(--Blue);
+
+    text-decoration: none;
+   
+    outline: none;
+    transition: all 0.25s ease;
+  }
+
+  footer .containerIcon .icon a:is(:hover, :focus) {
+    color: white;
+    background-color: var(--Blue);
+    border: none;
+  }
+
+footer .containerIcon .icon li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+  
+
+ @media screen and (min-width:570px) {
+    main .logo_container img {
+      width: 100%;
+    }
+
+    main .container article h1 {
+      font-size: 2.8rem;
+      color: var(--Very-Dark-Blue);
+    }
+
+    main .container article small {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    main .container form {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    main .container form input {
+      padding: 13px;
+    }
+
+    main .container form small {
+      position: absolute;
+      top: 74px;
+      left: 2pc;
+      font-size: 0.9rem;
+    }
+
+    main .container form button {
+      width: 40%;
+      padding: 17px;
+    }
+  }
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
