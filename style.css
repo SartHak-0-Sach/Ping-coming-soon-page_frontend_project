@@ -243,7 +243,6 @@ footer .containerIcon .icon li {
 
 /* Footer */
 .attribution {
-    position: absolute;
     bottom: .8rem;
     left: 50%;
     transform: translateX(-50%);
